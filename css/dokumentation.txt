@@ -1,0 +1,5 @@
+jplist
+https://www.jplist.org/documentation/api/add-element
+
+json api
+https://jsonplaceholder.typicode.com/
