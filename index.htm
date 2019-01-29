@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>jPList Hello World</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- jPList CSS -->
+        <link rel="stylesheet" href="css/jplist.styles.css" />
+    </head>
+    <body>
+
+            <!-- hidden sort control -->
+            <div
+                style="display: none"
+                data-jplist-control="hidden-sort"
+                data-group="group1"
+                data-path=".name"
+                data-order="asc"
+                data-type="text"></div>
+
+            <!-- text filter control -->
+            <div>
+                <input
+                    data-jplist-control="textbox-filter"
+                    data-group="group1"
+                    data-name="my-filter-1"
+                    data-path=".name"
+                    type="text"
+                    value=""
+                    data-clear-btn-id="name-clear-btn"
+                    placeholder="Filter by Name" />
+
+                <button type="button" id="name-clear-btn">Clear</button>
+            </div>
+            <div
+            data-jplist-control="pagination"
+            data-group="group1"
+            data-items-per-page="5"
+            data-current-page="0"
+            data-jump="top"
+            data-name="p"
+         data-id="p"
+        >
+        <span data-type="info">
+            Page {pageNumber} of {pagesNumber}
+        </span>
+    
+        <span data-type="info">
+           aaa {startItem} - {endItem} of {itemsNumber}
+        </span>
+        <div class="row mb-3">
+        
+            <button type="button" data-type="first">«</button>
+            <button type="button" data-type="prev">‹</button>
+
+            <div class="jplist-holder" data-type="pages">
+                <button type="button" data-type="page">{pageNumber}</button>
+            </div>
+            
+            <button type="button" data-type="next">›</button>
+            <button type="button" data-type="last">»</button>
+        
+        </div>
+        
+        <div class="row">
+        
+            <!-- items per page select -->
+            <select data-type="items-per-page">
+                <option value="3"> 3 per page </option>
+                <option value="5"> 5 per page </option>
+                <option value="10"> 10 per page </option>
+                <option value="0"> view all </option>
+            </select>
+
+            <span data-type="info">
+                Page {pageNumber} of {pagesNumber}
+            </span>
+        </div>
+    </div>
+    
+</div>
+            <!-- content to filter -->
+            <div data-jplist-group="group1">
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Cecilia Hanson</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Alejandro Miles</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Andy Harris</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Deanna Castillo</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Danny Richards</div>
+                </div>
+
+                 <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Allie Moss</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Stefanie Reyes</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Jakob Flores</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Christine Richards</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Miranda Hill</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Meghan Williamson</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Kierra Long</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Tara Park</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Anthony Reyes</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Malik Becker</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Daisy Hunter</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Arianna Fuller</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Stephan Wang</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Cristal Wallace</div>
+                </div>
+
+                <!-- item -->
+                <div data-jplist-item>
+                    <div class="name">Alyson Chandler</div>
+                </div>
+                <!-- no results control -->               
+                <div data-jplist-control="no-results" data-group="group1" data-name="no-results">No Results Found</div>
+        </div>
+        <!-- IE 10+ / Edge support via babel-polyfill: https://babeljs.io/docs/en/babel-polyfill/ -->
+        <script src="js/polyfill.min.js"></script>
+
+        <!-- jPList Library -->
+        <script src="js/jplist.min.js"></script>
+        <script>
+            jplist.init({
+                deepLinking: true,
+                storage: 'localStorage', //'localStorage', 'sessionStorage' or 'cookies'
+                storageName: 'my-page-storage' //the same storage name can be used to share storage between multiple pages
+            });
+        </script>
+    </body>
+</html>
